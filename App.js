@@ -12,6 +12,7 @@ import ExerciseDetail from "./screens/ExerciseDetail";
 import RoutineStart from "./screens/RoutineStart";
 import Home from "./screens/Home";
 import ForgotPassword from "./screens/ForgotPassword";
+import Notification from "./screens/Notification";
 
 const Stack = createNativeStackNavigator();
 
@@ -70,6 +71,12 @@ export default function App() {
         <Stack.Screen
           name="RoutineStart"
           component={RoutineStart}
+          options={{ headerShown: false }}
+        />
+
+        <Stack.Screen
+          name="Notification"
+          component={Notification}
           options={{ headerShown: false }}
         />
       </Stack.Navigator>

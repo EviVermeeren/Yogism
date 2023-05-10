@@ -17,15 +17,15 @@ const Home = ({ navigation }) => {
 
       <Image
         style={styles.groeneCirkel}
-        source={require("./Images/ellipse14.png")}
+        source={require("../media/ellipse14.png")}
       />
       <Image
         style={styles.oranjeStreep}
-        source={require("./Images/ellipse15.png")}
+        source={require("../media/ellipse15.png")}
       />
       <Image
         style={styles.groeneStreep}
-        source={require("./Images/ellipse16.png")}
+        source={require("../media/ellipse16.png")}
       />
 
       {/*    -------------------------------------------------    */}
@@ -35,31 +35,41 @@ const Home = ({ navigation }) => {
 
       {/*    -------------------------------------------------    */}
 
-      <TouchableOpacity style={styles.startRoutine}>
+      <TouchableOpacity
+        style={styles.startRoutine}
+        onPress={() => {
+          navigation.navigate("RoutineDetail");
+        }}
+      >
         <Image
           style={styles.gradientAchtergrond}
-          source={require("./Images/gradientAchtergrond.png")}
+          source={require("../media/gradientAchtergrond.png")}
         />
         <Text style={styles.startRoutineText}>Start je routine</Text>
         <Text style={styles.cheerfulMood}>Cheerful mood</Text>
         <View style={styles.bottomRow}>
           <Image
             style={styles.yogaPose}
-            source={require("./Images/yogaPose.png")}
+            source={require("../media/yogaPose.png")}
           />
           <Image
             style={styles.buttonPlay}
-            source={require("./Images/buttonPlay.png")}
+            source={require("../media/buttonPlay.png")}
           />
           <Image
             style={styles.playButton}
-            source={require("./Images/playButton.png")}
+            source={require("../media/playButton.png")}
           />
           <Text style={styles.durationText}>12-16 min</Text>
         </View>
       </TouchableOpacity>
 
-      <TouchableOpacity style={styles.bell}>
+      <TouchableOpacity
+        style={styles.bell}
+        onPress={() => {
+          navigation.navigate("Notification");
+        }}
+      >
         <View style={styles.icon}>
           <Feather name="bell" size={24} color="black" />
         </View>
@@ -71,7 +81,7 @@ const Home = ({ navigation }) => {
       <TouchableOpacity style={styles.buttonBekijkAlles1}>
         <Image
           style={styles.pijltje1}
-          source={require("./Images/pijltje.png")}
+          source={require("../media/pijltje.png")}
         />
         <Text style={styles.bekijkAlles2}>Bekijk alles</Text>
       </TouchableOpacity>
@@ -106,7 +116,7 @@ const Home = ({ navigation }) => {
           <TouchableOpacity style={styles.pose1}>
             <Image
               style={styles.crowPose1}
-              source={require("./Images/crowPose.png")}
+              source={require("../media/crowPose.png")}
             />
             <Text style={styles.titelPose1}>Crow Pose</Text>
             <Text style={styles.moeilijkheid1}>Beginner</Text>
@@ -115,7 +125,7 @@ const Home = ({ navigation }) => {
           <TouchableOpacity style={styles.pose2}>
             <Image
               style={styles.crowPose2}
-              source={require("./Images/crowPose.png")}
+              source={require("../media/crowPose.png")}
             />
             <Text style={styles.titelPose2}>Crow Pose</Text>
             <Text style={styles.moeilijkheid2}>Beginner</Text>
@@ -124,7 +134,7 @@ const Home = ({ navigation }) => {
           <TouchableOpacity style={styles.pose3}>
             <Image
               style={styles.crowPose3}
-              source={require("./Images/crowPose.png")}
+              source={require("../media/crowPose.png")}
             />
             <Text style={styles.titelPose3}>Crow Pose</Text>
             <Text style={styles.moeilijkheid3}>Beginner</Text>
@@ -133,7 +143,7 @@ const Home = ({ navigation }) => {
           <TouchableOpacity style={styles.pose4}>
             <Image
               style={styles.crowPose4}
-              source={require("./Images/crowPose.png")}
+              source={require("../media/crowPose.png")}
             />
             <Text style={styles.titelPose4}>Crow Pose</Text>
             <Text style={styles.moeilijkheid4}>Beginner</Text>
@@ -147,7 +157,7 @@ const Home = ({ navigation }) => {
       <TouchableOpacity style={styles.buttonBekijkAlles2}>
         <Image
           style={styles.pijltje2}
-          source={require("./Images/pijltje.png")}
+          source={require("../media/pijltje.png")}
         />
         <Text style={styles.bekijkAlles2}>Bekijk alles</Text>
       </TouchableOpacity>
@@ -158,7 +168,7 @@ const Home = ({ navigation }) => {
         <TouchableOpacity style={styles.routine}>
           <Image
             style={styles.ochtedHarmonie}
-            source={require("./Images/ochtedHarmonie.png")}
+            source={require("../media/ochtedHarmonie.png")}
           />
           <View style={styles.routineInfo}>
             <Text style={styles.titelRoutine}>Octhendharmonie</Text>
@@ -169,7 +179,7 @@ const Home = ({ navigation }) => {
         <TouchableOpacity style={styles.routine}>
           <Image
             style={styles.ochtedHarmonie}
-            source={require("./Images/ochtedHarmonie.png")}
+            source={require("../media/ochtedHarmonie.png")}
           />
           <View style={styles.routineInfo}>
             <Text style={styles.titelRoutine}>Octhendharmonie</Text>
@@ -180,7 +190,7 @@ const Home = ({ navigation }) => {
         <TouchableOpacity style={styles.routine}>
           <Image
             style={styles.ochtedHarmonie}
-            source={require("./Images/ochtedHarmonie.png")}
+            source={require("../media/ochtedHarmonie.png")}
           />
           <View style={styles.routineInfo}>
             <Text style={styles.titelRoutine}>Octhendharmonie</Text>
