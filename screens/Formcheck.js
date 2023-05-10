@@ -8,7 +8,7 @@ import {
 } from "react-native";
 import CustomButtonYellow2 from "../components/ButtonYellow2.js";
 
-const Notification = ({ navigation }) => {
+const Formcheck = ({ navigation }) => {
   return (
     <View style={styles.container}>
       <StatusBar style="auto" />
@@ -110,4 +110,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default Notification;
+export default Formcheck;

@@ -1,99 +1,115 @@
-import { StatusBar } from "expo-status-bar";
-import { StyleSheet } from "react-native";
+import * as React from "react";
 import { NavigationContainer } from "@react-navigation/native";
-import { createNativeStackNavigator } from "@react-navigation/native-stack";
+import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
+import { createStackNavigator } from "@react-navigation/stack";
 
-import Start from "./screens/Start";
-import Register from "./screens/Register";
-import Login from "./screens/Login";
+import Home from "./screens/Home";
+import Feed from "./screens/Feed";
+import Myyoga from "./screens/Myyoga";
+import Formcheck from "./screens/Formcheck";
+import Profiel from "./screens/Profiel";
+import ForgotPassword from "./screens/ForgotPassword";
 import ResetPassword from "./screens/ResetPassword";
+import Login from "./screens/Login";
+import Register from "./screens/Register";
 import RoutineDetail from "./screens/RoutineDetail";
 import ExerciseDetail from "./screens/ExerciseDetail";
 import RoutineStart from "./screens/RoutineStart";
-import Home from "./screens/Home";
-import ForgotPassword from "./screens/ForgotPassword";
 import Notification from "./screens/Notification";
+import Start from "./screens/Start";
 
-const Stack = createNativeStackNavigator();
+const Tab = createBottomTabNavigator();
+const Stack = createStackNavigator();
 
-export default function App() {
+function HomeStack() {
+  return (
+    <Stack.Navigator>
+      <Stack.Screen
+        name="Start"
+        component={Start}
+        options={{ headerShown: false, tabBarVisible: false }}
+      />
+      <Stack.Screen
+        name="Home"
+        component={Home}
+        options={{ headerShown: false }}
+      />
+      <Stack.Screen
+        name="RoutineDetail"
+        component={RoutineDetail}
+        options={{ headerShown: false, tabBarVisible: false }}
+      />
+      <Stack.Screen
+        name="ExerciseDetail"
+        component={ExerciseDetail}
+        options={{ headerShown: false, tabBarVisible: false }}
+      />
+      <Stack.Screen
+        name="RoutineStart"
+        component={RoutineStart}
+        options={{ headerShown: false, tabBarVisible: false }}
+      />
+      <Stack.Screen
+        name="Login"
+        component={Login}
+        options={{ headerShown: false, tabBarVisible: false }}
+      />
+      <Stack.Screen
+        name="Notification"
+        component={Notification}
+        options={{ headerShown: false, tabBarVisible: false }}
+      />
+      <Stack.Screen
+        name="Register"
+        component={Register}
+        options={{ headerShown: false, tabBarVisible: false }}
+      />
+      <Stack.Screen
+        name="ResetPassword"
+        component={ResetPassword}
+        options={{ headerShown: false, tabBarVisible: false }}
+      />
+      <Stack.Screen
+        name="ForgotPassword"
+        component={ForgotPassword}
+        options={{ headerShown: false, tabBarVisible: false }}
+      />
+    </Stack.Navigator>
+  );
+}
+
+function App() {
   return (
     <NavigationContainer>
-      <Stack.Navigator>
-        <Stack.Screen
-          name="Start"
-          component={Start}
+      <Tab.Navigator>
+        <Tab.Screen
+          name="HomeStack"
+          component={HomeStack}
           options={{ headerShown: false }}
         />
-
-        <Stack.Screen
-          name="Register"
-          component={Register}
+        <Tab.Screen
+          name="Feed"
+          component={Feed}
           options={{ headerShown: false }}
         />
-
-        <Stack.Screen
-          name="Login"
-          component={Login}
+        <Tab.Screen
+          name="Myyoga"
+          component={Myyoga}
           options={{ headerShown: false }}
         />
-
-        <Stack.Screen
-          name="ForgotPassword"
-          component={ForgotPassword}
+        <Tab.Screen
+          name="Formcheck"
+          component={Formcheck}
           options={{ headerShown: false }}
         />
-
-        <Stack.Screen
-          name="ResetPassword"
-          component={ResetPassword}
+        <Tab.Screen
+          name="Profiel"
+          component={Profiel}
           options={{ headerShown: false }}
         />
-
-        <Stack.Screen
-          name="Home"
-          component={Home}
-          options={{ headerShown: false }}
-        />
-
-        <Stack.Screen
-          name="RoutineDetail"
-          component={RoutineDetail}
-          options={{ headerShown: false }}
-        />
-
-        <Stack.Screen
-          name="ExerciseDetail"
-          component={ExerciseDetail}
-          options={{ headerShown: false }}
-        />
-
-        <Stack.Screen
-          name="RoutineStart"
-          component={RoutineStart}
-          options={{ headerShown: false }}
-        />
-
-        <Stack.Screen
-          name="Notification"
-          component={Notification}
-          options={{ headerShown: false }}
-        />
-      </Stack.Navigator>
+      </Tab.Navigator>
     </NavigationContainer>
   );
 }
 
-const styles = StyleSheet.create({
-  container: {
-    backgroundColor: "#fff",
-    alignItems: "center",
-    justifyContent: "center",
-  },
-
-  logo: {
-    width: 250,
-    height: 159,
-    marginTop: 210,
-  },
-});
+export default App;
