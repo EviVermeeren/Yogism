@@ -7,26 +7,21 @@ import {
   Text,
   ScrollView,
 } from "react-native";
-import Post from "../components/Post.js";
-import Line from "../components/Line.js";
+import Follow from "../components/Follow.js";
 
 const Feed = ({ navigation }) => {
   return (
     <ScrollView>
       <View style={styles.container}>
         <View style={styles.header}>
-          <Text style={styles.h1}>Feed</Text>
+          <Text style={styles.h1}>Zoeken</Text>
 
           <TouchableWithoutFeedback
             onPress={() => {
-              navigation.navigate("NewPost");
+              navigation.navigate("Feed");
             }}
           >
-            <Image
-              style={styles.logo}
-              source={require("../media/add.png")}
-              resizeMode="contain"
-            />
+            <Text>Annuleren</Text>
           </TouchableWithoutFeedback>
         </View>
         <View style={styles.search}>
@@ -39,18 +34,9 @@ const Feed = ({ navigation }) => {
             <Text style={styles.texts}>Posts of gebruikers zoeken ...</Text>
           </TouchableWithoutFeedback>
         </View>
-        <View style={styles.headersflex}>
-          <Text style={styles.headers}>Trending</Text>
-          <Text style={styles.headers2}>Volgend</Text>
-        </View>
-        <Post />
-        <Line />
 
-        <Post />
-        <Line />
-        <Post />
-        <Line />
-        <StatusBar style="auto" />
+        <Text style={styles.h2}>Voorgestelde gebruikers</Text>
+        <Follow />
       </View>
     </ScrollView>
   );
@@ -252,6 +238,15 @@ const styles = StyleSheet.create({
     backgroundColor: "#F2F2F2",
     paddingHorizontal: 10,
     marginBottom: 20,
+  },
+
+  h2: {
+    fontSize: 14,
+    color: "#212121",
+    fontWeight: "bold",
+    paddingBottom: 15,
+    marginLeft: -180,
+    paddingTop: 20,
   },
 });
 

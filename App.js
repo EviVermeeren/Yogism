@@ -19,6 +19,7 @@ import Notification from "./screens/Notification";
 import Start from "./screens/Start";
 import DetailPage from "./screens/DetailPage";
 import NewPost from "./screens/NewPost";
+import Search from "./screens/Search";
 
 const Tab = createBottomTabNavigator();
 const Stack = createStackNavigator();
@@ -84,6 +85,12 @@ function HomeStack() {
       <Stack.Screen
         name="NewPost"
         component={NewPost}
+        options={{ headerShown: false, tabBarVisible: false }}
+      />
+
+      <Stack.Screen
+        name="Search"
+        component={Search}
         options={{ headerShown: false, tabBarVisible: false }}
       />
     </Stack.Navigator>
