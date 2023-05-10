@@ -6,7 +6,6 @@ import {
   TextInput,
   TouchableWithoutFeedback,
 } from "react-native";
-import CustomButtonYellow2 from "../components/ButtonYellow2.js";
 
 const Formcheck = ({ navigation }) => {
   return (
