@@ -17,6 +17,7 @@ import ExerciseDetail from "./screens/ExerciseDetail";
 import RoutineStart from "./screens/RoutineStart";
 import Notification from "./screens/Notification";
 import Start from "./screens/Start";
+import DetailPage from "./screens/DetailPage";
 
 const Tab = createBottomTabNavigator();
 const Stack = createStackNavigator();
@@ -27,7 +28,7 @@ function HomeStack() {
       <Stack.Screen
         name="Start"
         component={Start}
-        options={{ headerShown: false, tabBarVisible: false }}
+        options={{ headerShown: false }}
       />
       <Stack.Screen
         name="Home"
@@ -72,6 +73,11 @@ function HomeStack() {
       <Stack.Screen
         name="ForgotPassword"
         component={ForgotPassword}
+        options={{ headerShown: false, tabBarVisible: false }}
+      />
+      <Stack.Screen
+        name="DetailPage"
+        component={DetailPage}
         options={{ headerShown: false, tabBarVisible: false }}
       />
     </Stack.Navigator>

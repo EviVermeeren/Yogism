@@ -5,15 +5,14 @@ const styles = StyleSheet.create({
     width: 342,
     height: 60,
     borderRadius: 24,
-    backgroundColor: "white",
-    borderColor: "#F2F2F2",
+    borderColor: "#7F7F7F",
     borderWidth: 1,
     alignItems: "center",
     justifyContent: "center",
-    marginTop: 25,
+    marginTop: 15,
   },
   buttonText: {
-    fontSize: 18,
+    fontSize: 16,
     color: "#212121",
   },
 });

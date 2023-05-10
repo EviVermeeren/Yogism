@@ -12,7 +12,7 @@ const styles = StyleSheet.create({
     marginBottom: 80,
   },
   buttonText: {
-    fontSize: 18,
+    fontSize: 16,
     color: "#FFFFFF",
   },
 });

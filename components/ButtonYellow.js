@@ -11,7 +11,7 @@ const styles = StyleSheet.create({
     marginTop: 300,
   },
   buttonText: {
-    fontSize: 18,
+    fontSize: 16,
     color: "#212121",
   },
 });

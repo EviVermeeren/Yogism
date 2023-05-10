@@ -1,22 +1,25 @@
 import { StyleSheet, TouchableOpacity, Text, View, Image } from "react-native";
 import { useNavigation } from "@react-navigation/native";
 
-function Post(props) {
+function DetailPost(props) {
   const navigation = useNavigation();
 
-  // Function to handle the press event of the picture
-  const handlePicturePress = () => {
-    // Navigate to the detail page
-    navigation.navigate("DetailPage"); // Replace "DetailPage" with the actual name of your detail page component
-  };
   return (
     <View>
       <View>
         <View>
-          <Image
-            source={require("../media/avatar.jpg")}
-            style={styles.avatar}
-          />
+          <View style={styles.backflex}>
+            <TouchableOpacity onPress={() => navigation.navigate("Feed")}>
+              <Image
+                style={styles.back}
+                source={require("../media/arrowleft2.png")}
+              />
+            </TouchableOpacity>
+            <Image
+              source={require("../media/avatar.jpg")}
+              style={styles.avatar}
+            />
+          </View>
 
           <View style={styles.flex}>
             <Text style={styles.name}>Evi Vermeêren</Text>
@@ -28,7 +31,6 @@ function Post(props) {
               style={styles.icons}
               source={require("../media/share-ios.png")}
             />
-            <Image style={styles.icons} source={require("../media/more.png")} />
           </View>
 
           <Text style={styles.desc}>
@@ -38,18 +40,11 @@ function Post(props) {
         </View>
       </View>
 
-      <View>
-        <TouchableOpacity
-          onPress={handlePicturePress}
-          style={styles.buttonWrapper}
-        >
-          <Image
-            source={require("../media/ochtedHarmonie.png")}
-            style={styles.pic}
-            resizeMode="contain"
-          />
-        </TouchableOpacity>
-      </View>
+      <Image
+        source={require("../media/ochtedHarmonie.png")}
+        style={styles.pic}
+        resizeMode="contain"
+      />
 
       <View style={styles.like}>
         <Image
@@ -76,18 +71,24 @@ const styles = StyleSheet.create({
     backgroundColor: "#F2F2F2",
     marginTop: 30,
   },
+
   avatar: {
     width: 40,
     height: 40,
     borderRadius: 100,
     marginTop: 20,
-    marginLeft: 30,
+    marginLeft: 20,
   },
 
   flex: {
     flexDirection: "column",
     marginTop: -40,
-    marginLeft: 80,
+    marginLeft: 120,
+  },
+
+  backflex: {
+    flexDirection: "row",
+    marginTop: 20,
   },
 
   name: {
@@ -111,6 +112,14 @@ const styles = StyleSheet.create({
     width: 25,
     height: 25,
     marginTop: 10,
+    marginLeft: 15,
+  },
+
+  back: {
+    width: 25,
+    height: 25,
+    marginTop: 25,
+    marginLeft: 20,
   },
 
   desc: {
@@ -150,4 +159,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default Post;
+export default DetailPost;

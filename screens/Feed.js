@@ -6,10 +6,9 @@ import {
   Image,
   Text,
   ScrollView,
-  TouchableOpacity,
 } from "react-native";
-import { SearchBar } from "@rneui/themed";
 import Post from "../components/Post.js";
+import Line from "../components/Line.js";
 
 const Feed = ({ navigation }) => {
   return (
@@ -30,21 +29,21 @@ const Feed = ({ navigation }) => {
             />
           </TouchableWithoutFeedback>
         </View>
-
         <View style={styles.search}>
           <Image style={styles.icon} source={require("../media/search.png")} />
           <Text style={styles.texts}>Posts of gebruikers zoeken ...</Text>
         </View>
-
         <View style={styles.headersflex}>
           <Text style={styles.headers}>Trending</Text>
           <Text style={styles.headers2}>Volgend</Text>
         </View>
+        <Post />
+        <Line />
 
         <Post />
+        <Line />
         <Post />
-        <Post />
-
+        <Line />
         <StatusBar style="auto" />
       </View>
     </ScrollView>
@@ -57,7 +56,11 @@ const styles = StyleSheet.create({
     alignItems: "center",
     justifyContent: "center",
   },
-
+  line: {
+    backgroundColor: "#F2F2F2",
+    height: 8,
+    width: "100%",
+  },
   texts: {
     color: "#7F7F7F",
     fontSize: 12,
