@@ -18,6 +18,7 @@ import RoutineStart from "./screens/RoutineStart";
 import Notification from "./screens/Notification";
 import Start from "./screens/Start";
 import DetailPage from "./screens/DetailPage";
+import NewPost from "./screens/NewPost";
 
 const Tab = createBottomTabNavigator();
 const Stack = createStackNavigator();
@@ -78,6 +79,11 @@ function HomeStack() {
       <Stack.Screen
         name="DetailPage"
         component={DetailPage}
+        options={{ headerShown: false, tabBarVisible: false }}
+      />
+      <Stack.Screen
+        name="NewPost"
+        component={NewPost}
         options={{ headerShown: false, tabBarVisible: false }}
       />
     </Stack.Navigator>

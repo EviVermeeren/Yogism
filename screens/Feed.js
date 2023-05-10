@@ -19,7 +19,7 @@ const Feed = ({ navigation }) => {
 
           <TouchableWithoutFeedback
             onPress={() => {
-              // navigation.navigate("Love");
+              navigation.navigate("NewPost");
             }}
           >
             <Image

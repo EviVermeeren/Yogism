@@ -6,9 +6,7 @@ import {
   Image,
   Text,
   ScrollView,
-  TouchableOpacity,
 } from "react-native";
-import { SearchBar } from "@rneui/themed";
 import DetailPost from "../components/DetailPost.js";
 import Comments from "../components/Comments.js";
 
