@@ -15,7 +15,7 @@ const Feed = ({ navigation }) => {
     <ScrollView>
       <View style={styles.container}>
         <View style={styles.header}>
-          <Text style={styles.h1}>Feed</Text>
+          <Text style={styles.h1}>Mijn yoga</Text>
 
           <TouchableWithoutFeedback
             onPress={() => {

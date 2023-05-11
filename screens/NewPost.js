@@ -42,7 +42,6 @@ const NewPost = ({ navigation }) => {
             source={require("../media/avatar.jpg")}
             style={styles.avatar}
           />
-
           <Text style={styles.name}>Evi Vermeêren</Text>
         </View>
 
@@ -171,7 +170,7 @@ const styles = StyleSheet.create({
     justifyContent: "center",
     gap: 90,
     width: 350,
-    marginBottom: 20,
+    marginBottom: 450,
   },
 
   border: {
