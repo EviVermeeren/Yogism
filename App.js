@@ -155,11 +155,15 @@ function HomeStack() {
 function App() {
   return (
     <NavigationContainer>
-      <Tab.Navigator>
+      <Tab.Navigator
+        tabBarOptions={{
+          activeTintColor: "#FF9C64",
+        }}
+      >
         <Tab.Screen
-          name="HomeStack"
+          name="Home"
           component={HomeStack}
-          options={{ headerShown: false }}
+          options={{ headerShown: false, activeTintColor: "#FF9C64" }}
         />
         <Tab.Screen
           name="Feed"
