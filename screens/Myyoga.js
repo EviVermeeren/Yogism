@@ -5,7 +5,6 @@ import {
   StyleSheet,
   Text,
   View,
-  TextInput,
   TouchableWithoutFeedback,
   Image,
   ScrollView,
@@ -16,7 +15,7 @@ const Myyoga = ({ navigation }) => {
   return (
     <View style={styles.container}>
       <View style={styles.header}>
-        <Text style={styles.h1}>Feed</Text>
+        <Text style={styles.h1}>Mijn Yoga</Text>
 
         <TouchableWithoutFeedback
           onPress={() => {
@@ -34,7 +33,7 @@ const Myyoga = ({ navigation }) => {
         <Image style={styles.icon} source={require("../media/search.png")} />
         <TouchableWithoutFeedback
           onPress={() => {
-            navigation.navigate("Search");
+            navigation.navigate("ExerciseSearch");
           }}
         >
           <Text style={styles.texts}>Zoeken ...</Text>
@@ -50,7 +49,13 @@ const Myyoga = ({ navigation }) => {
       </View>
 
       <View style={styles.headersflex2}>
-        <Text style={styles.headers2}>Bibliotheek</Text>
+        <TouchableWithoutFeedback
+          onPress={() => {
+            navigation.navigate("Bibliotheek");
+          }}
+        >
+          <Text style={styles.headers2}>Bibliotheek</Text>
+        </TouchableWithoutFeedback>
         <Image
           style={styles.icons2}
           source={require("../media/arrowright2.png")}

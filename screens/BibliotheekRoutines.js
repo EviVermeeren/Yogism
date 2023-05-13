@@ -10,13 +10,11 @@ import {
 import Post from "../components/Post.js";
 import Line from "../components/Line.js";
 
-const Feed = ({ navigation }) => {
+const BibliotheekRoutines = ({ navigation }) => {
   return (
     <ScrollView>
       <View style={styles.container}>
         <View style={styles.header}>
-          <Text style={styles.h1}>Feed</Text>
-
           <TouchableWithoutFeedback
             onPress={() => {
               navigation.navigate("NewPost");
@@ -24,10 +22,11 @@ const Feed = ({ navigation }) => {
           >
             <Image
               style={styles.logo}
-              source={require("../media/add.png")}
+              source={require("../media/back.png")}
               resizeMode="contain"
             />
           </TouchableWithoutFeedback>
+          <Text style={styles.h1}>Bibliotheek</Text>
         </View>
         <View style={styles.search}>
           <Image style={styles.icon} source={require("../media/search.png")} />
@@ -36,20 +35,39 @@ const Feed = ({ navigation }) => {
               navigation.navigate("Search");
             }}
           >
-            <Text style={styles.texts}>Posts of gebruikers zoeken ...</Text>
+            <Text style={styles.texts}>Zoeken ...</Text>
           </TouchableWithoutFeedback>
         </View>
         <View style={styles.headersflex}>
-          <Text style={styles.headers}>Trending</Text>
-          <Text style={styles.headers2}>Volgend</Text>
-        </View>
-        <Post />
-        <Line />
+          <Text
+            onPress={() => {
+              navigation.navigate("Bibliotheek");
+            }}
+            style={styles.headers2}
+          >
+            Poses
+          </Text>
 
-        <Post />
-        <Line />
-        <Post />
-        <Line />
+          <Text style={styles.headers}>Routines</Text>
+        </View>
+
+        <View style={styles.oefeningen}>
+          <TouchableWithoutFeedback
+            onPress={() => {
+              navigation.navigate("ExerciseDetail");
+            }}
+          >
+            <Image
+              style={styles.posepic}
+              source={require("../media/poses.png")}
+              resizeMode="contain"
+            />
+          </TouchableWithoutFeedback>
+          <View>
+            <Text style={styles.posetext}>Child's Pose</Text>
+            <Text style={styles.posetext2}>2 min</Text>
+          </View>
+        </View>
         <StatusBar style="auto" />
       </View>
     </ScrollView>
@@ -61,6 +79,32 @@ const styles = StyleSheet.create({
     backgroundColor: "#fff",
     alignItems: "center",
     justifyContent: "center",
+  },
+  oefeningen: {
+    flexDirection: "row",
+    gap: 25,
+    width: 340,
+    marginTop: 20,
+  },
+
+  posepic: {
+    width: 60,
+    height: 60,
+    borderRadius: 20,
+  },
+
+  boxtext: {
+    fontSize: 14,
+  },
+
+  posetext: {
+    fontSize: 16,
+    marginTop: 8,
+  },
+
+  posetext2: {
+    fontSize: 14,
+    color: "#7F7F7F",
   },
   line: {
     backgroundColor: "#F2F2F2",
@@ -78,7 +122,7 @@ const styles = StyleSheet.create({
     justifyContent: "center",
     marginTop: 40,
     gap: 70,
-    marginLeft: 120,
+    marginLeft: -120,
   },
 
   h1: {
@@ -236,7 +280,7 @@ const styles = StyleSheet.create({
   icon: {
     width: 20,
     height: 20,
-    marginLeft: -120,
+    marginLeft: -210,
     marginRight: 10,
   },
 
@@ -255,4 +299,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default Feed;
+export default BibliotheekRoutines;

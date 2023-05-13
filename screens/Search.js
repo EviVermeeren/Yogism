@@ -21,7 +21,7 @@ const Feed = ({ navigation }) => {
               navigation.navigate("Feed");
             }}
           >
-            <Text>Annuleren</Text>
+            <Text style={styles.orange}>Annuleren</Text>
           </TouchableWithoutFeedback>
         </View>
         <View style={styles.search}>
@@ -47,6 +47,11 @@ const styles = StyleSheet.create({
     backgroundColor: "#fff",
     alignItems: "center",
     justifyContent: "center",
+  },
+
+  orange: {
+    color: "#FF7A00",
+    fontWeight: "bold",
   },
   line: {
     backgroundColor: "#F2F2F2",

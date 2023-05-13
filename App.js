@@ -20,6 +20,9 @@ import Start from "./screens/Start";
 import DetailPage from "./screens/DetailPage";
 import NewPost from "./screens/NewPost";
 import Search from "./screens/Search";
+import ExerciseSearch from "./screens/ExerciseSearch";
+import Bibliotheek from "./screens/Bibliotheek";
+import BibliotheekRoutines from "./screens/BibliotheekRoutines";
 
 const Tab = createBottomTabNavigator();
 const Stack = createStackNavigator();
@@ -92,6 +95,22 @@ function HomeStack() {
         name="Search"
         component={Search}
         options={{ headerShown: false, tabBarVisible: false }}
+      />
+
+      <Stack.Screen
+        name="ExerciseSearch"
+        component={ExerciseSearch}
+        options={{ headerShown: false }}
+      />
+      <Stack.Screen
+        name="Bibliotheek"
+        component={Bibliotheek}
+        options={{ headerShown: false }}
+      />
+      <Stack.Screen
+        name="BibliotheekRoutines"
+        component={BibliotheekRoutines}
+        options={{ headerShown: false }}
       />
     </Stack.Navigator>
   );

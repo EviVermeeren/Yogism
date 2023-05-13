@@ -7,26 +7,21 @@ import {
   Text,
   ScrollView,
 } from "react-native";
-import Post from "../components/Post.js";
-import Line from "../components/Line.js";
+import Line2 from "../components/Line2.js";
 
-const Feed = ({ navigation }) => {
+const ExerciseSearch = ({ navigation }) => {
   return (
     <ScrollView>
       <View style={styles.container}>
         <View style={styles.header}>
-          <Text style={styles.h1}>Feed</Text>
+          <Text style={styles.h1}>Zoeken</Text>
 
           <TouchableWithoutFeedback
             onPress={() => {
-              navigation.navigate("NewPost");
+              navigation.navigate("Myyoga");
             }}
           >
-            <Image
-              style={styles.logo}
-              source={require("../media/add.png")}
-              resizeMode="contain"
-            />
+            <Text style={styles.orange}>Annuleren</Text>
           </TouchableWithoutFeedback>
         </View>
         <View style={styles.search}>
@@ -36,21 +31,55 @@ const Feed = ({ navigation }) => {
               navigation.navigate("Search");
             }}
           >
-            <Text style={styles.texts}>Posts of gebruikers zoeken ...</Text>
+            <Text style={styles.texts}>Zoeken ...</Text>
           </TouchableWithoutFeedback>
         </View>
-        <View style={styles.headersflex}>
-          <Text style={styles.headers}>Trending</Text>
-          <Text style={styles.headers2}>Volgend</Text>
-        </View>
-        <Post />
-        <Line />
 
-        <Post />
-        <Line />
-        <Post />
-        <Line />
-        <StatusBar style="auto" />
+        <Text style={styles.h2}>Recent</Text>
+
+        <View style={styles.history}>
+          <Text style={styles.h3}>Ontspannend</Text>
+          <Image style={styles.icon2} source={require("../media/x.png")} />
+        </View>
+        <Line2 />
+
+        <View style={styles.history}>
+          <Text style={styles.h3}>Kind</Text>
+          <Image style={styles.icon2} source={require("../media/x.png")} />
+        </View>
+        <Line2 />
+
+        <Text style={styles.h2}>Trending</Text>
+        <View style={styles.history}>
+          <Text style={styles.h3}>Tegen nekpijn</Text>
+          <Image style={styles.icon2} source={require("../media/x.png")} />
+        </View>
+        <Line2 />
+
+        <View style={styles.history}>
+          <Text style={styles.h3}>Rugklachten</Text>
+          <Image style={styles.icon2} source={require("../media/x.png")} />
+        </View>
+        <Line2 />
+
+        <Text style={styles.h2}>Niveau</Text>
+        <View style={styles.history}>
+          <Text style={styles.h3}>Hoog</Text>
+          <Image style={styles.icon2} source={require("../media/x.png")} />
+        </View>
+        <Line2 />
+
+        <View style={styles.history}>
+          <Text style={styles.h3}>Middelmatig</Text>
+          <Image style={styles.icon2} source={require("../media/x.png")} />
+        </View>
+        <Line2 />
+
+        <View style={styles.history}>
+          <Text style={styles.h3}>Laag</Text>
+          <Image style={styles.icon2} source={require("../media/x.png")} />
+        </View>
+        <Line2 />
       </View>
     </ScrollView>
   );
@@ -61,6 +90,11 @@ const styles = StyleSheet.create({
     backgroundColor: "#fff",
     alignItems: "center",
     justifyContent: "center",
+  },
+
+  orange: {
+    color: "#FF7A00",
+    fontWeight: "bold",
   },
   line: {
     backgroundColor: "#F2F2F2",
@@ -236,7 +270,7 @@ const styles = StyleSheet.create({
   icon: {
     width: 20,
     height: 20,
-    marginLeft: -120,
+    marginLeft: -210,
     marginRight: 10,
   },
 
@@ -253,6 +287,33 @@ const styles = StyleSheet.create({
     paddingHorizontal: 10,
     marginBottom: 20,
   },
+
+  h2: {
+    fontSize: 14,
+    color: "#212121",
+    fontWeight: "bold",
+    marginLeft: -300,
+    paddingTop: 20,
+  },
+
+  h3: {
+    fontSize: 14,
+    color: "#212121",
+    paddingBottom: 15,
+    paddingTop: 20,
+  },
+
+  history: {
+    flexDirection: "row",
+    alignItems: "center",
+    justifyContent: "space-between",
+    width: 350,
+  },
+
+  icon2: {
+    width: 20,
+    height: 20,
+  },
 });
 
-export default Feed;
+export default ExerciseSearch;
