@@ -8,6 +8,7 @@ import {
   ScrollView,
 } from "react-native";
 import Follow from "../components/Follow.js";
+import Users from "../components/Users.js";
 
 const Feed = ({ navigation }) => {
   return (
@@ -36,7 +37,11 @@ const Feed = ({ navigation }) => {
         </View>
 
         <Text style={styles.h2}>Voorgestelde gebruikers</Text>
-        <Follow />
+        <Users text="Evi Vermeêren" />
+        <Users text="Brend Van den Eynde" />
+        <Users text="Yannick Van den Brande" />
+        <Users text="Arne Samson" />
+        <Users text="Glenn Vinck" />
       </View>
     </ScrollView>
   );
@@ -47,6 +52,7 @@ const styles = StyleSheet.create({
     backgroundColor: "#fff",
     alignItems: "center",
     justifyContent: "center",
+    paddingBottom: 300,
   },
 
   orange: {

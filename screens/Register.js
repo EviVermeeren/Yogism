@@ -61,7 +61,7 @@ const Register = ({ navigation }) => {
         <CustomButtonYellow2
           title="Registreer"
           onPress={() => {
-            navigation.navigate("RoutineDetail");
+            navigation.navigate("Home");
           }}
           disabled={false}
         />

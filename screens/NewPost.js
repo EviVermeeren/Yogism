@@ -17,7 +17,7 @@ const NewPost = ({ navigation }) => {
         <View style={styles.header}>
           <TouchableWithoutFeedback
             onPress={() => {
-              navigation.goBack();
+              navigation.navigate("Feed");
             }}
           >
             <Image

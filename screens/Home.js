@@ -92,19 +92,19 @@ const Home = ({ navigation }) => {
         <TouchableOpacity style={styles.buttonLowImpact}>
           <Text style={styles.buttonText}>Low impact</Text>
         </TouchableOpacity>
-        <TouchableOpacity style={styles.buttonSnel}>
+        <TouchableOpacity style={styles.buttonLowImpact}>
           <Text style={styles.buttonText}>Snel</Text>
         </TouchableOpacity>
-        <TouchableOpacity style={styles.buttonBeginner}>
+        <TouchableOpacity style={styles.buttonLowImpact}>
           <Text style={styles.buttonText}>Beginner</Text>
         </TouchableOpacity>
-        <TouchableOpacity style={styles.buttonGeavanceerd}>
+        <TouchableOpacity style={styles.buttonLowImpact}>
           <Text style={styles.buttonText}>Geavanceerd</Text>
         </TouchableOpacity>
-        <TouchableOpacity style={styles.buttonIntens}>
+        <TouchableOpacity style={styles.buttonLowImpact}>
           <Text style={styles.buttonText}>Intens</Text>
         </TouchableOpacity>
-        <TouchableOpacity style={styles.buttonKracht}>
+        <TouchableOpacity style={styles.buttonLowImpact}>
           <Text style={styles.buttonText}>Kracht</Text>
         </TouchableOpacity>
       </ScrollView>
@@ -393,10 +393,10 @@ const styles = StyleSheet.create({
     backgroundColor: "#F2F2F2",
     borderRadius: 20,
     paddingTop: 3,
-    paddingBottom: 5,
     paddingLeft: 20,
     paddingRight: 20,
     marginRight: 10,
+    height: 30,
   },
 
   buttonSnel: {

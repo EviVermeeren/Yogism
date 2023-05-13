@@ -28,29 +28,6 @@ const NotificationSettings = ({ navigation }) => {
         </TouchableWithoutFeedback>
         <Text style={styles.h1}>Meldingen </Text>
       </View>
-
-      <View style={styles.meldingen}>
-        <Notifications
-          text="Evi VermeÃªren heeft je post geliked."
-          onPress={() => navigation.navigate("Settings")}
-        />
-        <Notifications
-          text="Glenn Vinck reageerde op je bericht."
-          onPress={() => navigation.navigate("Beveiliging")}
-        />
-        <Notifications
-          text="Brend Van den Eynde heeft jouw routine bewaard."
-          onPress={() => navigation.navigate("Abonnement")}
-        />
-        <Notifications
-          text="Yente Beyens reageerde op je bericht."
-          onPress={() => navigation.navigate("")}
-        />
-        <Notifications
-          text="Yannick heeft Brend uit zijn vriendenlijst verwijderd."
-          onPress={() => navigation.navigate("")}
-        />
-      </View>
     </View>
   );
 };

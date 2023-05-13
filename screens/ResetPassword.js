@@ -28,9 +28,9 @@ const Login = ({ navigation }) => {
         />
 
         <CustomButtonYellow2
-          title="Log in"
+          title="Reset wachtwoord"
           onPress={() => {
-            navigation.navigate("Home");
+            navigation.navigate("Login");
           }}
           disabled={false}
         />

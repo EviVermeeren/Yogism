@@ -17,7 +17,7 @@ const Bibliotheek = ({ navigation }) => {
         <View style={styles.header}>
           <TouchableWithoutFeedback
             onPress={() => {
-              navigation.navigate("NewPost");
+              navigation.navigate("Myyoga");
             }}
           >
             <Image

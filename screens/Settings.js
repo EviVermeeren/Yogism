@@ -13,7 +13,7 @@ const Settings = ({ navigation }) => {
       <View style={styles.header}>
         <TouchableWithoutFeedback
           onPress={() => {
-            navigation.goBack();
+            navigation.navigate("Profiel");
           }}
         >
           <View style={styles.backButton}>
