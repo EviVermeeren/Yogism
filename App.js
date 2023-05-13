@@ -40,7 +40,7 @@ function HomeStack() {
       <Stack.Screen
         name="Start"
         component={Start}
-        options={{ headerShown: false }}
+        options={{ headerShown: false, tabBarVisible: false }}
       />
       <Stack.Screen
         name="Home"
@@ -159,6 +159,7 @@ function App() {
       <Tab.Navigator
         tabBarOptions={{
           activeTintColor: "#FF9C64",
+          inactiveTintColor: "#212121",
         }}
       >
         <Tab.Screen
@@ -166,7 +167,7 @@ function App() {
           component={HomeStack}
           options={{
             headerShown: false,
-            tabBarIcon: () => <Icon name="home" size={25} color="#FF9C64" />,
+            tabBarIcon: () => <Icon name="home" size={25} />,
           }}
         />
         <Tab.Screen
@@ -174,7 +175,7 @@ function App() {
           component={Feed}
           options={{
             headerShown: false,
-            tabBarIcon: () => <Icon name="heart" size={25} color="#FF9C64" />,
+            tabBarIcon: () => <Icon name="heart" size={25} />,
           }}
         />
         <Tab.Screen
@@ -182,9 +183,7 @@ function App() {
           component={Myyoga}
           options={{
             headerShown: false,
-            tabBarIcon: () => (
-              <Icon name="appstore-o" size={25} color="#FF9C64" />
-            ),
+            tabBarIcon: () => <Icon name="appstore-o" size={25} />,
           }}
         />
         <Tab.Screen
@@ -192,7 +191,7 @@ function App() {
           component={Formcheck}
           options={{
             headerShown: false,
-            tabBarIcon: () => <Icon name="folder1" size={25} color="#FF9C64" />,
+            tabBarIcon: () => <Icon name="folder1" size={25} />,
           }}
         />
         <Tab.Screen
@@ -200,7 +199,7 @@ function App() {
           component={Profiel}
           options={{
             headerShown: false,
-            tabBarIcon: () => <Icon name="user" size={25} color="#FF9C64" />,
+            tabBarIcon: () => <Icon name="user" size={25} />,
           }}
         />
       </Tab.Navigator>
