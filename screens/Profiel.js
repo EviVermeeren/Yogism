@@ -19,7 +19,7 @@ const Profiel = ({ navigation }) => {
 
           <TouchableWithoutFeedback
             onPress={() => {
-              // navigation.navigate("Love");
+              navigation.navigate("Settings");
             }}
           >
             <Image

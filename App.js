@@ -23,6 +23,12 @@ import Search from "./screens/Search";
 import ExerciseSearch from "./screens/ExerciseSearch";
 import Bibliotheek from "./screens/Bibliotheek";
 import BibliotheekRoutines from "./screens/BibliotheekRoutines";
+import Favorites from "./screens/Favorites";
+import FavoritesPoses from "./screens/FavoritesPoses";
+import Settings from "./screens/Settings";
+import NotificationSettings from "./screens/NotificationSettings";
+import Beveiliging from "./screens/Beveiliging";
+import Abonnement from "./screens/Abonnement";
 
 const Tab = createBottomTabNavigator();
 const Stack = createStackNavigator();
@@ -110,6 +116,36 @@ function HomeStack() {
       <Stack.Screen
         name="BibliotheekRoutines"
         component={BibliotheekRoutines}
+        options={{ headerShown: false }}
+      />
+      <Stack.Screen
+        name="Favorites"
+        component={Favorites}
+        options={{ headerShown: false }}
+      />
+      <Stack.Screen
+        name="FavoritesPoses"
+        component={FavoritesPoses}
+        options={{ headerShown: false }}
+      />
+      <Stack.Screen
+        name="Settings"
+        component={Settings}
+        options={{ headerShown: false }}
+      />
+      <Stack.Screen
+        name="NotificationSettings"
+        component={NotificationSettings}
+        options={{ headerShown: false }}
+      />
+      <Stack.Screen
+        name="Beveiliging"
+        component={Beveiliging}
+        options={{ headerShown: false }}
+      />
+      <Stack.Screen
+        name="Abonnement"
+        component={Abonnement}
         options={{ headerShown: false }}
       />
     </Stack.Navigator>

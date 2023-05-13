@@ -10,7 +10,7 @@ import {
 import Post from "../components/Post.js";
 import Line from "../components/Line.js";
 
-const BibliotheekRoutines = ({ navigation }) => {
+const Favorites = ({ navigation }) => {
   return (
     <ScrollView>
       <View style={styles.container}>
@@ -26,7 +26,7 @@ const BibliotheekRoutines = ({ navigation }) => {
               resizeMode="contain"
             />
           </TouchableWithoutFeedback>
-          <Text style={styles.h1}>Bibliotheek</Text>
+          <Text style={styles.h1}>Favorieten</Text>
         </View>
         <View style={styles.search}>
           <Image style={styles.icon} source={require("../media/search.png")} />
@@ -41,7 +41,7 @@ const BibliotheekRoutines = ({ navigation }) => {
         <View style={styles.headersflex}>
           <Text
             onPress={() => {
-              navigation.navigate("Bibliotheek");
+              navigation.navigate("FavoritesPoses");
             }}
             style={styles.headers2}
           >
@@ -354,4 +354,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default BibliotheekRoutines;
+export default Favorites;

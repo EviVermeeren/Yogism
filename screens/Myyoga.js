@@ -19,7 +19,7 @@ const Myyoga = ({ navigation }) => {
 
         <TouchableWithoutFeedback
           onPress={() => {
-            //navigation.navigate("NewPost");
+            navigation.navigate("Favorites");
           }}
         >
           <Image

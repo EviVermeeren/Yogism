@@ -7,10 +7,8 @@ import {
   Text,
   ScrollView,
 } from "react-native";
-import Post from "../components/Post.js";
-import Line from "../components/Line.js";
 
-const BibliotheekRoutines = ({ navigation }) => {
+const FavoritesPoses = ({ navigation }) => {
   return (
     <ScrollView>
       <View style={styles.container}>
@@ -26,7 +24,7 @@ const BibliotheekRoutines = ({ navigation }) => {
               resizeMode="contain"
             />
           </TouchableWithoutFeedback>
-          <Text style={styles.h1}>Bibliotheek</Text>
+          <Text style={styles.h1}>Favorieten</Text>
         </View>
         <View style={styles.search}>
           <Image style={styles.icon} source={require("../media/search.png")} />
@@ -39,16 +37,16 @@ const BibliotheekRoutines = ({ navigation }) => {
           </TouchableWithoutFeedback>
         </View>
         <View style={styles.headersflex}>
+          <Text style={styles.headers}>Poses</Text>
+
           <Text
             onPress={() => {
-              navigation.navigate("Bibliotheek");
+              navigation.navigate("Favorites");
             }}
             style={styles.headers2}
           >
-            Poses
+            Routines
           </Text>
-
-          <Text style={styles.headers}>Routines</Text>
         </View>
 
         <View style={styles.oefeningen}>
@@ -354,4 +352,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default BibliotheekRoutines;
+export default FavoritesPoses;
