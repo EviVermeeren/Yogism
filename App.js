@@ -2,6 +2,7 @@ import * as React from "react";
 import { NavigationContainer } from "@react-navigation/native";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import { createStackNavigator } from "@react-navigation/stack";
+import Icon from "react-native-vector-icons/AntDesign";
 
 import Home from "./screens/Home";
 import Feed from "./screens/Feed";
@@ -163,27 +164,44 @@ function App() {
         <Tab.Screen
           name="Home"
           component={HomeStack}
-          options={{ headerShown: false, activeTintColor: "#FF9C64" }}
+          options={{
+            headerShown: false,
+            tabBarIcon: () => <Icon name="home" size={25} color="#FF9C64" />,
+          }}
         />
         <Tab.Screen
           name="Feed"
           component={Feed}
-          options={{ headerShown: false }}
+          options={{
+            headerShown: false,
+            tabBarIcon: () => <Icon name="heart" size={25} color="#FF9C64" />,
+          }}
         />
         <Tab.Screen
-          name="Myyoga"
+          name="Mijn Yoga"
           component={Myyoga}
-          options={{ headerShown: false }}
+          options={{
+            headerShown: false,
+            tabBarIcon: () => (
+              <Icon name="appstore-o" size={25} color="#FF9C64" />
+            ),
+          }}
         />
         <Tab.Screen
           name="Formcheck"
           component={Formcheck}
-          options={{ headerShown: false }}
+          options={{
+            headerShown: false,
+            tabBarIcon: () => <Icon name="folder1" size={25} color="#FF9C64" />,
+          }}
         />
         <Tab.Screen
           name="Profiel"
           component={Profiel}
-          options={{ headerShown: false }}
+          options={{
+            headerShown: false,
+            tabBarIcon: () => <Icon name="user" size={25} color="#FF9C64" />,
+          }}
         />
       </Tab.Navigator>
     </NavigationContainer>
