@@ -30,7 +30,7 @@ const Home = ({ navigation }) => {
 
       {/*    -------------------------------------------------    */}
 
-      <Text style={styles.heyUser}>Hey, Brend!</Text>
+      <Text style={styles.heyUser}>Hey, Evi!</Text>
       <Text style={styles.welcome}>Welkom terug!</Text>
 
       {/*    -------------------------------------------------    */}
@@ -245,7 +245,7 @@ const styles = StyleSheet.create({
     fontSize: 30,
     fontWeight: "bold",
     top: 50,
-    left: -100,
+    left: -120,
   },
 
   welcome: {
