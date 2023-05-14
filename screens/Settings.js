@@ -28,18 +28,22 @@ const Settings = ({ navigation }) => {
       </View>
 
       <View style={styles.SettingsItems}>
-        <View style={styles.itemContainer}>
-          <Image
-            style={styles.notificationImage}
-            source={require("../media/mijnGegevens.png")}
-          />
-          <Image
-            style={styles.pijltjeVolgende1}
-            source={require("../media/pijltjeVolgende.png")}
-          ></Image>
-          <Text style={styles.text}>Mijn gegevens</Text>
-        </View>
-      </View>
+  <TouchableWithoutFeedback 
+    onPress={() => navigation.navigate("MijnGegevens")}
+  >
+    <View style={styles.itemContainer}>
+      <Image
+        style={styles.notificationImage}
+        source={require("../media/mijnGegevens.png")}
+      />
+      <Image
+        style={styles.pijltjeVolgende5}
+        source={require("../media/pijltjeVolgende.png")}
+      />
+      <Text style={styles.text}>Mijn Gegevens</Text>
+    </View>
+  </TouchableWithoutFeedback>
+</View>
 
       <View style={styles.SettingsItems}>
         <TouchableWithoutFeedback
@@ -96,7 +100,7 @@ const Settings = ({ navigation }) => {
       </View>
 
       <View style={styles.SettingsItems}>
-        <TouchableWithoutFeedback onPress={() => navigation.navigate("")}>
+        <TouchableWithoutFeedback onPress={() => navigation.navigate("FAQ")}>
           <View style={styles.itemContainer}>
             <Image
               style={styles.notificationImage}
@@ -112,7 +116,7 @@ const Settings = ({ navigation }) => {
       </View>
 
       <View style={styles.SettingsItems}>
-        <TouchableWithoutFeedback onPress={() => navigation.navigate("")}>
+        <TouchableWithoutFeedback onPress={() => navigation.navigate("Contact")}>
           <View style={styles.itemContainer}>
             <Image
               style={styles.notificationImage}
@@ -146,7 +150,7 @@ const Settings = ({ navigation }) => {
       </View>
 
       <View style={styles.SettingsItems}>
-        <TouchableWithoutFeedback onPress={() => navigation.navigate("")}>
+        <TouchableWithoutFeedback onPress={() => navigation.navigate("Start")}>
           <View style={styles.itemContainer}>
             <Image
               style={styles.notificationImage}

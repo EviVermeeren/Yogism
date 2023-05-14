@@ -30,6 +30,10 @@ import Settings from "./screens/Settings";
 import NotificationSettings from "./screens/NotificationSettings";
 import Beveiliging from "./screens/Beveiliging";
 import Abonnement from "./screens/Abonnement";
+import Contact from "./screens/Contact";
+import FAQ from "./screens/FAQ";
+import MijnGegevens from "./screens/MijnGegevens";
+import GegevensWijzigen from "./screens/GegevensWijzigen";
 
 const Tab = createBottomTabNavigator();
 const Stack = createStackNavigator();
@@ -149,6 +153,32 @@ function HomeStack() {
         component={Abonnement}
         options={{ headerShown: false }}
       />
+
+      <Stack.Screen
+        name="Contact"
+        component={Contact}
+        options={{ headerShown: false }}
+      />
+
+      <Stack.Screen
+        name="FAQ"
+        component={FAQ}
+        options={{ headerShown: false }}
+      />
+
+      <Stack.Screen
+        name="MijnGegevens"
+        component={MijnGegevens}
+        options={{ headerShown: false }}
+      />
+
+      <Stack.Screen
+        name="GegevensWijzigen"
+        component={GegevensWijzigen}
+        options={{ headerShown: false }}
+      />
+
+
     </Stack.Navigator>
   );
 }
