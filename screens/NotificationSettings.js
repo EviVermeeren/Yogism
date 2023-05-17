@@ -1,3 +1,4 @@
+import React, { useState } from 'react';
 import { StatusBar } from "expo-status-bar";
 import {
   StyleSheet,
@@ -6,9 +7,12 @@ import {
   TouchableWithoutFeedback,
   Image,
 } from "react-native";
-import Notifications from "../components/Notifications.js";
+import CustomSwitch from '../components/CustomSwitch';
 
 const NotificationSettings = ({ navigation }) => {
+  const [isEnabled, setIsEnabled] = React.useState(false);
+  const toggleSwitch = () => setIsEnabled(previousState => !previousState);
+
   return (
     <View style={styles.container}>
       <StatusBar style="auto" />
@@ -28,6 +32,17 @@ const NotificationSettings = ({ navigation }) => {
         </TouchableWithoutFeedback>
         <Text style={styles.h1}>Meldingen </Text>
       </View>
+
+          <View>
+          <CustomSwitch labelText="Nieuwe volgers" />
+          <CustomSwitch labelText="Likes op jouw routines" />
+          <CustomSwitch labelText="Likes op jouw posts" />
+          <CustomSwitch labelText="Reacties op jouw routines" />
+          <CustomSwitch labelText="Reacties op jouw posts" />
+          <CustomSwitch labelText="Vermeldingen" />
+          </View>
+
+      
     </View>
   );
 };
@@ -70,6 +85,19 @@ const styles = StyleSheet.create({
     marginTop: -270,
     gap: 10,
   },
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+  NotificationSettings: {
+      flexDirection: 'row',
+      alignItems: 'center',
+      padding: 10,
+    },
+    label: {
+      flex: 1,
+      fontSize: 18,
+    },
+
 });
 
 export default NotificationSettings;
