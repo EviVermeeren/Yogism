@@ -7,8 +7,6 @@ import {
   Text,
   ScrollView,
 } from "react-native";
-import Post from "../components/Post.js";
-import Line from "../components/Line.js";
 
 const Favorites = ({ navigation }) => {
   return (

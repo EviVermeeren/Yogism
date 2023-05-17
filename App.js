@@ -34,6 +34,16 @@ import Contact from "./screens/Contact";
 import FAQ from "./screens/FAQ";
 import MijnGegevens from "./screens/MijnGegevens";
 import GegevensWijzigen from "./screens/GegevensWijzigen";
+import MaakRoutine from "./screens/MaakRoutine";
+import MaakRoutine1 from "./screens/MaakRoutine1";
+import MaakRoutine2 from "./screens/MaakRoutine2";
+import MaakRoutine3 from "./screens/MaakRoutine3";
+import MaakRoutineAi from "./screens/MaakRoutineAi";
+import MaakRoutineAi2 from "./screens/MaakRoutineAi2";
+import MaakRoutineAi3 from "./screens/MaakRoutineAi3";
+import MaakRoutineAi4 from "./screens/MaakRoutineAi4";
+
+
 
 const Tab = createBottomTabNavigator();
 const Stack = createStackNavigator();
@@ -178,8 +188,57 @@ function HomeStack() {
         options={{ headerShown: false }}
       />
 
+      <Stack.Screen
+        name="MaakRoutine"
+        component={MaakRoutine}
+        options={{ headerShown: false }}
+      />
+
+      <Stack.Screen
+        name="MaakRoutine1"
+        component={MaakRoutine1}
+        options={{ headerShown: false }}
+      />
+
+    <Stack.Screen
+        name="MaakRoutine2"
+        component={MaakRoutine2}
+        options={{ headerShown: false }}
+      />
+
+    <Stack.Screen
+        name="MaakRoutine3"
+        component={MaakRoutine3}
+        options={{ headerShown: false }}
+      />
+    
+    <Stack.Screen
+        name="MaakRoutineAi"
+        component={MaakRoutineAi}
+        options={{ headerShown: false }}
+      />
+
+    <Stack.Screen
+        name="MaakRoutineAi2"
+        component={MaakRoutineAi2}
+        options={{ headerShown: false }}
+      />
+
+    <Stack.Screen
+        name="MaakRoutineAi3"
+       component={MaakRoutineAi3}
+        options={{ headerShown: false }}
+      /> 
+
+    <Stack.Screen
+        name="MaakRoutineAi4"
+        component={MaakRoutineAi4}
+        options={{ headerShown: false }}
+      />
+
 
     </Stack.Navigator>
+
   );
 }
 

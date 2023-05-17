@@ -40,13 +40,14 @@ const Myyoga = ({ navigation }) => {
         </TouchableWithoutFeedback>
       </View>
 
-      <View style={styles.headersflex}>
-        <Text style={styles.headers}>Maak een nieuwe routine</Text>
-        <Image
-          style={styles.icons}
-          source={require("../media/addcirclew.png")}
-        />
-      </View>
+            <TouchableWithoutFeedback   onPress={() => {
+            navigation.navigate("MaakRoutine");
+          }}>
+        <View style={styles.headersflex}>
+          <Text style={styles.headers}>Maak een nieuwe routine</Text>
+          <Image style={styles.icons} source={require("../media/addcirclew.png")} />
+        </View>
+      </TouchableWithoutFeedback>
 
       <View style={styles.headersflex2}>
         <TouchableWithoutFeedback

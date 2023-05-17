@@ -1,17 +1,34 @@
 import React from "react";
 import { View, Text, TouchableWithoutFeedback, StyleSheet, Image, TextInput } from "react-native";
 
-const Formcheck = ({ navigation }) => {
+const MaakRoutine1 = ({ navigation }) => {
   return (
     <View style={styles.container}>
       <View style={styles.header}>
-        
-        <Text style={styles.h1}>Formcheck </Text>
-        <Text style={styles.kies}>Kies een pose </Text>
-        <TouchableWithoutFeedback>
-        <Image style={styles.Icoon} source={require("../media/videohorizontal.png")} />
+        <TouchableWithoutFeedback
+          onPress={() => {
+            navigation.goBack();
+          }}
+        >
+          <View style={styles.backButton}>
+            <Image
+              style={styles.logo}
+              source={require("../media/back.png")}
+              resizeMode="contain"
+            />
+          </View>
         </TouchableWithoutFeedback>
+        <Text style={styles.h1}>Stap 1 van 3 </Text>
       </View>
+
+      <TouchableWithoutFeedback
+    onPress={() => {
+      navigation.navigate("MaakRoutine");
+          }}>
+          <View style={styles.AnnulerenButton}>
+          <Text style={styles.Annuleren}>Annuleren </Text>
+          </View>
+        </TouchableWithoutFeedback>
 
       <View style={styles.searchContainer}>
         <Image style={styles.searchIcon} source={require("../media/search.png")} />
@@ -19,7 +36,7 @@ const Formcheck = ({ navigation }) => {
       </View>
 
       <View style={styles.cardList}>
-        {[...Array(7)].map((_, index) => (
+        {[...Array(6)].map((_, index) => (
             <View key={index} style={styles.cardContainer}>
             <Image style={styles.cardImage} source={require("../media/ChildPose.png")} />
             <View style={styles.cardContent}>
@@ -28,16 +45,22 @@ const Formcheck = ({ navigation }) => {
             </View>
             <TouchableWithoutFeedback>
                 <View style={styles.cardAdd}>
-                <Image style={styles.arrow} source={require("../media/arrowright2.png")} />
+                <Text style={styles.cardAddText}>+</Text>
                 </View>
             </TouchableWithoutFeedback>
             </View>
         ))}
         </View>
 
+      <TouchableWithoutFeedback style={styles.nextButton} onPress={() => navigation.navigate("MaakRoutine2")}>
+        <View style={styles.nextButtonContainer}>
+          <Text style={styles.nextButtonText}>Volgende</Text>
+        </View>
+      </TouchableWithoutFeedback>
     </View>
   );
 };
+
 
 const styles = StyleSheet.create({
     container: {
@@ -62,25 +85,22 @@ const styles = StyleSheet.create({
       height: 50,
       left: -90,
     },
-
-    Icoon: {
-      left: 45,
-      top: 3,
-    },
-
     h1: {
       fontSize: 24,
       fontWeight: "bold",
-      left: 60,    
+      left: -30,    
   },
 
-    kies: {
-        fontSize: 16,
-        color: "grey",
-        top: 50,
-        left: -63,
+    AnnulerenButton: {
+        top: -50,
+        left: 285,
     },
-    
+
+    Annuleren: {
+        fontSize: 16,
+        fontWeight: "bold",
+        color: "#FF9C64",
+    },
 
 
   /////////////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -101,7 +121,6 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     paddingHorizontal: 10,
     marginBottom: 20,
-    top:40,
   },
   searchIcon: {
     width: 20,
@@ -120,7 +139,6 @@ const styles = StyleSheet.create({
     backgroundColor: '#FFFFFF',
     borderRadius: 5,
     padding: 10,
-    top: 30,
   },
   cardImage: {
     width: 70,
@@ -133,6 +151,7 @@ const styles = StyleSheet.create({
   },
   cardTitle: {
     fontSize: 20,
+    fontWeight: 'bold',
     marginBottom: 5,
   },
   cardSubtitle: {
@@ -140,6 +159,7 @@ const styles = StyleSheet.create({
     color: '#C4C4C4',
   },
   cardAdd: {
+    backgroundColor: 'black',
     width: 30,
     height: 30,
     borderRadius: 20,
@@ -153,11 +173,25 @@ const styles = StyleSheet.create({
     top: -3,
     left: 0.5,
   },
-
-  arrow: {
-    width: 20,
-    height: 20,
+  nextButton: {
+    backgroundColor: '#FF9C64',
+    alignSelf: 'center',
+  },
+  nextButtonContainer: {
+    width: "80%",
+    height: 50,
+    backgroundColor: '#FF9C64',
+    borderRadius: 25,
+    alignItems: 'center',
+    justifyContent: 'center',
+    alignSelf: 'center',
+    marginTop: 20,
+  },
+  nextButtonText: {
+    fontSize: 16,
+    fontWeight: 'bold',
+    color: '#FFFFFF',
   },
 });
     
-export default Formcheck;
+export default MaakRoutine1;
