@@ -1,9 +1,8 @@
 {
-  "builds": {
-    "production": {
-      "distribution": "internal", // or "store" if you're distributing to app stores
-      "releaseChannel": "default"
-    }
+  "cli": {
+    "version": ">= 0.44.0"
+  },
+  "build": {
+    "production": {}
   }
 }
-
