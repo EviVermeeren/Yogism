@@ -1,1 +1,9 @@
-{}
+{
+  "builds": {
+    "production": {
+      "distribution": "internal", // or "store" if you're distributing to app stores
+      "releaseChannel": "default"
+    }
+  }
+}
+
